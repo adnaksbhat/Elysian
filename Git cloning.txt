@@ -1,0 +1,22 @@
+open repository in Github
+copy url
+
+git clone (url copied)  
+//////////////command prompt in www
+
+/////////////cd to the folder created
+
+copy .env.example .env
+
+/////////////give database name in .env 
+/////////////create database in phpmyadmin
+
+composer install
+php artisan migrate
+php artisan key:generate
+php artisan serve
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
+
