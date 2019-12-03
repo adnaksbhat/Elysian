@@ -1,0 +1,5 @@
+laravel new projectname
+php artisan make:migration create_tablename
+php artisan migrate
+php artisan make:controller my_controller
+php artisan make:model model_name
