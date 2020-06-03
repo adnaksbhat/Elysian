@@ -1,0 +1,161 @@
+//create a file in ur folder with name Procfile
+it should contain    
+web: vendor/bin/heroku-php-apache2 public/
+
+//open ur website folder and run in cmd prompt
+
+
+1. git init        //this will create .git file in tht folder
+
+((((((C:\Users\Skanda\Desktop\MovieTicketWebsite>git init
+Initialized empty Git repository in C:/Users/Skanda/Desktop/MovieTicketWebsite/.git/)))))))
+
+
+
+2. git add *     //will add all to github
+
+(((((((C:\Users\Skanda\Desktop\MovieTicketWebsite>git add *
+warning: LF will be replaced by CRLF in .editorconfig.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in .env.example.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in .gitattributes.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in yarn.lock.
+The file will have its original line endings in your working directory)))))))
+
+
+3. git commit -m "some message"     //commiting
+
+((((((C:\Users\Skanda\Desktop\MTBW>git commit -m "Message"
+[master 8cae54c] Message
+ 349 files changed, 132550 insertions(+)
+ create mode 100644 .editorconfig
+ create mode 100644 .env.example
+ create mode 100644 .gitattributes
+ create mode 100644 .gitignore
+ create mode 100644 .styleci.yml
+ create mode 100644 Procfile
+ create mode 100644 Snip/2.PNG
+ create mode 100644 Snip/3.PNG))))))))
+
+
+
+
+4. git push        //push to github
+
+(((((((((((((((
+C:\Users\Skanda\Desktop\MTBW>git push
+Enumerating objects: 377, done.
+Counting objects: 100% (377/377), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (355/355), done.
+Writing objects: 100% (376/376), 23.15 MiB | 704.00 KiB/s, done.
+Total 376 (delta 56), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (56/56), done.
+To https://github.com/adnaksbhat/MTBW.git
+   45dedd8..8cae54c  master -> master))))))))))))))))))
+
+
+5. heroku login
+
+((((((((((((((
+C:\Users\Skanda\Desktop\MTBW>heroku login
+heroku: Press any key to open up the browser to login or q to exit:
+Opening browser to https://cli-auth.heroku.com/auth/cli/browser/d6573049-e0bc-458d-9eb2-f3f53296a875
+Logging in... done
+Logged in as adnaks7bhat@gmail.com)))))))))))))))))))
+
+6. heroku create
+
+(((((((((((((((((((
+C:\Users\Skanda\Desktop\MTBW>heroku create
+Creating app... done, ? aqueous-cliffs-20613
+https://aqueous-cliffs-20613.herokuapp.com/ | https://git.heroku.com/aqueous-cliffs-20613.git)))))))))))))))
+
+
+7. heroku remote -v
+
+((((((((((((C:\Users\Skanda\Desktop\MTBW>git remote -v
+heroku  https://git.heroku.com/aqueous-cliffs-20613.git (fetch)
+heroku  https://git.heroku.com/aqueous-cliffs-20613.git (push)
+origin  https://github.com/adnaksbhat/MTBW.git (fetch)
+origin  https://github.com/adnaksbhat/MTBW.git (push))))))))))))))0
+
+
+8. git push heroku master
+
+((((((((((((((C:\Users\Skanda\Desktop\MTBW>git push heroku master
+Enumerating objects: 379, done.
+Counting objects: 100% (379/379), done.
+Delta compression using up to 2
+remote: -----> Compressing...
+remote:        Done: 41.5M
+remote: -----> Launching...
+remote:        Released v3
+remote:        https://aqueous-cliffs-20613.herokuapp.com/ deployed to Heroku
+remote:
+remote: Verifying deploy... done.
+To https://git.heroku.com/aqueous-cliffs-20613.git
+ * [new branch]      master -> master)))))))))))))))))
+
+
+
+
+
+//now give key , debug=true in config vars
+
+
+
+
+
+
+
+
+
+
+
+9. heroku pg:credentials:url
+
+(((((((((((((((C:\Users\Skanda\Desktop\MTBW>heroku pg:credentials:url
+Connection information for default credential.
+Connection info string:
+   "dbname=df1b2vls6c3o7c host=ec2-54-86-170-8.compute-1.amazonaws.com port=5432 user=mtvnwyvakeggxw password=410e62b24a33bdbd9a5694dc8a0bc4345d8617ba13f27c885c7c087ac62f657f sslmode=require"
+Connection URL:
+   postgres://mtvnwyvakeggxw:410e62b24a33bdbd9a5694dc8a0bc4345d8617ba13f27c885c7c087ac62f657f@ec2-54-86-170-8.compute-1.amazonaws.com:5432/df1b2vls6c3o7c)))))))))))))))))))))
+
+
+
+
+
+//now goto resources and give addons
+//now give dbconnection dbusername dbassword dbport dbdatabase dbhost in config vars
+
+
+
+
+
+
+10.  heroku run php artisan migrate
+
+((((((((((((((C:\Users\Skanda\Desktop\MTBW>heroku run php artisan migrate
+Running php artisan migrate on ? aqueous-cliffs-20613... up, run.6526 (Free)
+**************************************
+*     Application In Production!     *
+**************************************))))))))))))))))))))
+
+
+
+
+
+
+
+
+//to make changes do everthing from step 2
+
+
+
+//for inseting to database, click on postgress in resources -> dataclips
+//give name
+//then start sql commands
+//insert into "user" values(1,'user','user','abc@gmail.com');
