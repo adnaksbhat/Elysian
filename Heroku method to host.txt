@@ -74,7 +74,7 @@ Creating app... done, ? aqueous-cliffs-20613
 https://aqueous-cliffs-20613.herokuapp.com/ | https://git.heroku.com/aqueous-cliffs-20613.git)))))))))))))))
 
 
-7. heroku remote -v
+7. git remote -v
 
 ((((((((((((C:\Users\Skanda\Desktop\MTBW>git remote -v
 heroku  https://git.heroku.com/aqueous-cliffs-20613.git (fetch)
@@ -158,4 +158,13 @@ Running php artisan migrate on ? aqueous-cliffs-20613... up, run.6526 (Free)
 //for inseting to database, click on postgress in resources -> dataclips
 //give name
 //then start sql commands
-//insert into "user" values(1,'user','user','abc@gmail.com');
+
+
+do like this
+//
+
+
+begin;
+set transaction read write;
+INSERT INTO "admin" VALUES('1','user','user');
+commit;
